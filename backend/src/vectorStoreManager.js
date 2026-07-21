@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Document } = require('@langchain/core/documents');
-const { HNSWLib } = require('@langchain/community/vectorstores/hnswlib');
+const { MemoryVectorStore } = require('langchain/vectorstores/memory');
 const { HuggingFaceTransformersEmbeddings } = require('@langchain/community/embeddings/hf_transformers');
 const { RecursiveCharacterTextSplitter } = require('@langchain/textsplitters');
 
@@ -67,46 +67,31 @@ function storePathFor(slug) {
 }
 
 /**
- * Builds a fresh HNSWLib index for a company from its source .docx and
- * persists it to disk.
+ * Builds a fresh MemoryVectorStore index for a company from its source .docx in-memory.
  */
 async function buildIndexForCompany(companyName) {
   const entry = config.companyRegistry[companyName];
   if (!entry) throw new Error(`Unknown company: ${companyName}`);
 
-  console.log(`[vectorStore] Building index for "${companyName}" from ${entry.sourceFile} ...`);
+  console.log(`[vectorStore] Building in-memory index for "${companyName}" from ${entry.sourceFile} ...`);
   const policies = await loadCompanyPolicies(entry.sourceFile);
   const docs = await policiesToDocuments(policies);
 
   const embeddings = getEmbeddings();
-  const store = await HNSWLib.fromDocuments(docs, embeddings);
+  const store = await MemoryVectorStore.fromDocuments(docs, embeddings);
 
-  const dir = storePathFor(entry.slug);
-  fs.mkdirSync(dir, { recursive: true });
-  await store.save(dir);
-  console.log(`[vectorStore] Indexed ${policies.length} policies (${docs.length} chunks) for "${companyName}".`);
+  console.log(`[vectorStore] Indexed ${policies.length} policies (${docs.length} chunks) in-memory for "${companyName}".`);
   return store;
 }
 
 /**
- * Loads a persisted index from disk, or builds one if it doesn't exist yet.
+ * Loads a persisted index, or builds one. For MemoryVectorStore, we always build it fresh in memory.
  */
 async function loadIndexForCompany(companyName) {
-  const entry = config.companyRegistry[companyName];
-  if (!entry) throw new Error(`Unknown company: ${companyName}`);
-
-  const dir = storePathFor(entry.slug);
-  const hasIndex = fs.existsSync(path.join(dir, 'hnswlib.index'));
-
-  if (hasIndex && !config.rebuildIndexOnStart) {
-    console.log(`[vectorStore] Loading cached index for "${companyName}" from ${dir}`);
-    const embeddings = getEmbeddings();
-    return HNSWLib.load(dir, embeddings);
-  }
   return buildIndexForCompany(companyName);
 }
 
-const storeCache = new Map(); // companyName -> Promise<HNSWLib>
+const storeCache = new Map(); // companyName -> Promise<MemoryVectorStore>
 
 /**
  * Returns a ready-to-query vector store for the given company, building or
