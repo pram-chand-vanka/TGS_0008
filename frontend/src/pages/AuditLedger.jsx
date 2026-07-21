@@ -37,6 +37,7 @@ export default function AuditLedger() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [expandedBlock, setExpandedBlock] = useState(null);
+  const [showAll, setShowAll] = useState(false);
 
   async function loadData() {
     setLoading(true);
@@ -101,7 +102,7 @@ export default function AuditLedger() {
       <Box sx={{ mb: 4, display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
         <Box>
           <Typography variant="h5" sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 1 }}>
-            <FingerprintIcon color="primary" /> Audit Ledger &amp; Cryptographic Seal
+            <FingerprintIcon color="primary" /> AUDIT STORE SERVICE
           </Typography>
           <Typography variant="body2" color="text.secondary">
             Immutable, tamper-evident audit store powered by cryptographic SHA-256 hash chains and RSA-2048 non-repudiation seals.
@@ -278,7 +279,7 @@ export default function AuditLedger() {
 
       {/* Ledger Block List */}
       <Stack spacing={2}>
-        {records.map((block) => {
+        {(showAll ? records : records.slice(0, 5)).map((block) => {
           const isCompromised = !verification.verified && verification.issues.some((issue) => issue.requestId === block.requestId);
           const isExpanded = expandedBlock === block.requestId;
 
@@ -597,6 +598,14 @@ export default function AuditLedger() {
           );
         })}
       </Stack>
+
+      {records.length > 5 && (
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 3 }}>
+          <Button variant="outlined" onClick={() => setShowAll(!showAll)}>
+            {showAll ? 'Show Latest 5 Only' : `Show All (${records.length}) Blocks`}
+          </Button>
+        </Box>
+      )}
     </Container>
   );
 }

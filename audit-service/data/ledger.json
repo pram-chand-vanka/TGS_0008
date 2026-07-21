@@ -757,5 +757,902 @@
     "previousHash": "ddf89897f320a096b479334766b888f0b3886b277032082ad91f77bd45901763",
     "hash": "69e1ec6d48d9b8d503dfeaa6e7efc394078207c69025bfab76b1dd0331fced40",
     "signature": "J1NYDdWw9nFQySZBEs6EtXYV1wjuNEiI/W53moRkyNZF0k1qa69lKkMpXNrEs+M+tstu7aTub/CGCYx0uQfee9MjhgqSfZEG02YmqN2zYlY196BJfAK+6PgqN3V5T0VMgOPJpXsds+sGtFoAHAYvYeHjZwwXVdvHI0NaZTh6jT3+7mYyk4awAOS3pwr8KXZcExlNbsfh5b5HKH8S2P+4TjEKZ7MroYf25kO+3/3iUqn0oXY2BysJLyzEZVTwDJfc/MayRD2jqo0FwLpEbiKDpG2G7WODojwrxUq8cAaXO7TRGfo5D43xgbSmDxdyknaofYDE0p22RBdIMsTjJ0x+mQ=="
+  },
+  {
+    "index": 11,
+    "timestamp": "2026-07-21T07:20:16.621Z",
+    "requestId": "b47adfa3-d9c5-48fb-b8d5-e4e58b033725",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.3693
+          },
+          {
+            "policyId": "POL-015",
+            "title": "Restart Production Application Service",
+            "category": "Application Deployment",
+            "relevanceScore": 0.3327
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.3183
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.3174
+          },
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.2878
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devops_user",
+        "role": "DevOps Engineer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "Deploy the payments service to production",
+        "riskScore": 78,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "Given the Zone 3 (Escalate) assessment and the request's non-compliance with POL-013, particularly the lack of CAB approval and the requester's role not matching the policy's Authorized Role, the decision is to hold the request. The request's details do not align with the requirements for a production deployment as outlined in POL-013, necessitating further review and approval. The risk score of 78 also indicates a need for caution, supporting the decision to hold rather than approve the request outright. The request should be escalated for further review and approval, ensuring that all necessary conditions are met before proceeding with the deployment.",
+        "recommendation": "Escalate the request to a Senior DevOps Engineer for review and obtain Change Advisory Board (CAB) approval before proceeding with the deployment."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T07:20:16.598Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "69e1ec6d48d9b8d503dfeaa6e7efc394078207c69025bfab76b1dd0331fced40",
+    "hash": "0d01c7774dd3c848be84867a9ecc19e48617bfef9bf241f631f88168fad58d83",
+    "signature": "KKPy8lWiNXixwgBMN6vaWYk9izCf+AnBfGqwotHEbdxUdxy13U6LvUkxPEyxjAkIGcYuR5gW86zvGT/3NBaVyFQIHKzsHxb/rZHiD209YAjCmqZ3WvwLvkPZmhg5FNHjaSvuCuGGHrvlrlvbOX/OubfwY5eOy2hhCrdRZFAyvHefEkFUHTRHLY/KWhUs48qzEg0pnkmCjG60SwZ4Tga2kzfECVyagnJfWmYSme2vNuCaSNvSCk5IUKr4wOoPc1o+X9neZHoEAAJrq8Xwa4JeRPIA3tkbBetgHoaGpiM/3axb7wLDAWmWpVw+3WTKuAppwr4cbpjhKS38ASnFDHtyYA=="
+  },
+  {
+    "index": 12,
+    "timestamp": "2026-07-21T07:34:36.818Z",
+    "requestId": "4e814cff-d1ff-4f64-a23f-b4b01815ee1e",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-004",
+            "title": "Create Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.7484
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.8548
+          },
+          {
+            "policyId": "POL-022",
+            "title": "Disable Security Logging",
+            "category": "Security Operations",
+            "relevanceScore": 0.8673
+          },
+          {
+            "policyId": "POL-021",
+            "title": "Create Administrator Account",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.8828
+          },
+          {
+            "policyId": "POL-016",
+            "title": "Create Virtual Machine",
+            "category": "Infrastructure Operations",
+            "relevanceScore": 0.8997
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "prem",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "generate test cases for login api",
+        "riskScore": 30,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "Given the low risk score of 30 and the classification as Zone 1 (Auto Respond), the request to generate test cases for the login API can proceed without needing further clarification or human escalation. The provided policies, while not directly addressing the action, do not indicate any violation or requirement for additional consent. The requester's role as a Developer and the Development environment align with the intent of the policies related to testing and deployment activities. Therefore, the request is approved as it aligns with the company's approach to testing and development activities without violating any known policies.",
+        "recommendation": "Proceed with generating test cases for the login API in the Development environment."
+      },
+      "execution": {
+        "decision": "APPROVED",
+        "evaluatedAt": "2026-07-21T07:34:36.805Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "0d01c7774dd3c848be84867a9ecc19e48617bfef9bf241f631f88168fad58d83",
+    "hash": "3b24713fba0deac898d4a81b42c966f08e870b4a0b1675f05c7beaa3328cb2f2",
+    "signature": "Ig2zATFDGrLfozNHB0H1ujJwP1Pr2hZqU9lNdBDnsADlawz1Q82W1Y08raZtXOtyWDeqXH+ZF8rY9PQtKdziQCgOuF6YVu410jRMLZOl4sPHZZjL86ET2Z6lgZa7eV+TLGPmo4U4h3mPfL67osC0MiaNgcfDqsYwN6+eO/pa11cgVMVeUvYRtHr7pKRtb27U81LDa0qu+DMVSQm9CQBRDa/4Hn9G4F4JB6BRnpV/Luzhwp8xYN1XpsaSrnhkYeOWDaM10246vBYr0QTechDekHgAdRjbkUCbdLbz2daOmcUMcYh875fgiJTIR7SpMFKSBwTHiUyG4vnjGVjbSgly1A=="
+  },
+  {
+    "index": 13,
+    "timestamp": "2026-07-21T07:36:07.590Z",
+    "requestId": "bcb8c790-a202-4b8f-801c-b80bed9e7ba1",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6307
+          },
+          {
+            "policyId": "POL-015",
+            "title": "Restart Production Application Service",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6673
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6817
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6826
+          },
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.7122
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "DevOps Engineer",
+        "role": "DevOps Engineer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "Deploy the payments service to production",
+        "riskScore": 78,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the requester's role not matching the authorized role for production deployments as per POL-013, and the lack of CAB approval. Given the Zone 3 (Escalate) assessment, human escalation is required, aligning with the need for careful consideration of production deployments. The request does not comply with key aspects of POL-013, including the requirement for CAB approval and adherence to approved maintenance windows. Therefore, the request must be held until these conditions are met.",
+        "recommendation": "Escalate the request to a Senior DevOps Engineer for review and obtain Change Advisory Board (CAB) approval before proceeding with the deployment."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T07:36:07.582Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "3b24713fba0deac898d4a81b42c966f08e870b4a0b1675f05c7beaa3328cb2f2",
+    "hash": "236a534d8a3fd727072bb6b5f9ad879cfffceb0aae72d18a118777543adf7a07",
+    "signature": "VOGh+Sg6XZYVAlZ0+X7OflCpAV5pCNBhOhyQtfcJBgA5Sz53FEbF5FRR2Y+HYJPLdXyFfxvOvLzL3ZGQ/0HEH8UrqOhZsGT1TnZOH0L/y9Xc+HcMsP2BH/IwXD05P2RIkKLWKLeir9dqPHIFD0LwjBLjumuHvTPrU6DKXIMO2OR4EsKdA+pZtlklyGNXCuVxgUnHO1GNnGro8nc/ZXx/B6P9AtOM2F5ujjlmfMlbBj/iFW1O4eDhPXrfdjFuuUR97QRr25sVu9s2aahT2ic737VbmnHKynNXu/+PhKdSTP/nQCLUoymn8stkHoYFbnmhUS/t9kctGUigPPg9jyz95A=="
+  },
+  {
+    "index": 14,
+    "timestamp": "2026-07-21T07:39:25.982Z",
+    "requestId": "ade50479-7311-44cf-945b-c6ecc73c7449",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.4548
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.4975
+          },
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5061
+          },
+          {
+            "policyId": "POL-015",
+            "title": "Restart Production Application Service",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5223
+          },
+          {
+            "policyId": "POL-026",
+            "title": "Deploy AI Model to Production",
+            "category": "AI Operations",
+            "relevanceScore": 0.5334
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devops_user",
+        "role": "DevOps Engineer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "deploy new policies to the production",
+        "riskScore": 69,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the requester's role not matching the authorized role for Production deployments as per POL-013, and the lack of required consent from the Change Advisory Board. Given the Zone 3 (Escalate) assessment, human escalation is necessary. The request does not meet the policy requirements for deploying to Production, necessitating a hold until these conditions are met. The environment check passes as the request is for Production, but other checks fail due to non-compliance with POL-013. The accountability check is a warning due to the legitimate role of the requester but the overall non-compliance with policy.",
+        "recommendation": "Escalate the request to a Senior DevOps Engineer for review and obtain Change Advisory Board approval before proceeding with the deployment."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T07:39:25.978Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "236a534d8a3fd727072bb6b5f9ad879cfffceb0aae72d18a118777543adf7a07",
+    "hash": "b703d9f30843014b48974d23184c2b1ff3a68ed28e2f3bc6b6b13886c9e32ab7",
+    "signature": "PIFrvPTCDL1Clz9CMHzrqHOGDdfahlcqkR+fqnYYgZnbKC8QAGX+dGsXw4Qsn55O/vcgJ37utkuoWfehGC53OYq/zDdtmibCAqO1kQJVAT+ZLK4FqXK4/lx5wAianjYvZfhqQ5rEODhKTlfGfwTJCsbs4IS3oQJBepfnA3Mn4O/e9HcbVxM6sjm9c39ipauesupHX9mHUzSf25s6B+SjYyCIyMvGm0Zuvi7+P44Yv2Kk91bGibHOguZUw4W9bUj+Ym9vw3oBgSmxUkb1OJe9ii/wGW18mppScNHV1x3v8OvkrYApsoHAAsMBlDMbhrbiRp3DWeN3zsI2LhYkMOCVAA=="
+  },
+  {
+    "index": 15,
+    "timestamp": "2026-07-21T07:39:55.049Z",
+    "requestId": "70fede23-b10f-4aa3-bb9c-56f0d1a26f83",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.4548
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.4975
+          },
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5061
+          },
+          {
+            "policyId": "POL-015",
+            "title": "Restart Production Application Service",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5223
+          },
+          {
+            "policyId": "POL-026",
+            "title": "Deploy AI Model to Production",
+            "category": "AI Operations",
+            "relevanceScore": 0.5334
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devops_user",
+        "role": "Senior Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "deploy new policies to the production",
+        "riskScore": 69,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the requester's role not matching the authorized role for Production deployments as per POL-013, and the lack of CAB approval and compliance with the policy's requirements. Given the Zone 3 (Escalate) assessment, human escalation/consent is required. The request does not meet the necessary criteria for approval, and thus, it is being held pending further review and compliance with POL-013.",
+        "recommendation": "Escalate the request to the Change Advisory Board (CAB) for approval and ensure compliance with POL-013 before proceeding with the deployment."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T07:39:55.047Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "b703d9f30843014b48974d23184c2b1ff3a68ed28e2f3bc6b6b13886c9e32ab7",
+    "hash": "0c42c989b7608e4fe1473c3c4b6fd97efc6621038d4f6fb97ed908d1253689ad",
+    "signature": "HqOSjM5ccGuj0VE3+Y6jHkEoFjiCEvoVuqSR8IaM0274wxjchxopIdSzn4gJuXJaMIxVeAwd9VMwh3SCb87N+Rk8Ys3WQB7p0CCFhCFkX2lRBQh1tTvFYjGyT7lwkXHVVslMGXAfBqNE0DO8obStIcIwj5o9D3APxYdsCCqScNdgND7jdmqRvDZU6GPQIwxlsbBV2UsjZMH43B6el7Wff+uUkMvAsbKKkKp9R2PPHt+71WPExPKtdKwFaAQnAtcOrwpO0JGY9B2/p0GE+8zB0bndzZIHRB70ReVfTyq4aY7EupuHp3FEPQqOR7TU0i6cPi/hJkEYV/D18tbJjq8Now=="
+  },
+  {
+    "index": 16,
+    "timestamp": "2026-07-21T07:40:29.359Z",
+    "requestId": "16f4024c-2b43-4a50-a7b2-1ec90c0a2094",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.4548
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.4975
+          },
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5061
+          },
+          {
+            "policyId": "POL-015",
+            "title": "Restart Production Application Service",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5223
+          },
+          {
+            "policyId": "POL-026",
+            "title": "Deploy AI Model to Production",
+            "category": "AI Operations",
+            "relevanceScore": 0.5334
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devops_user",
+        "role": "Senior Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "deploy new policies to the production",
+        "riskScore": 0,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold this request is based on the requester's role not matching the authorized role specified in POL-013 for deploying to Production, and the lack of CAB approval. Given the low risk score and Zone 1 assessment, the request could potentially proceed with proper authorization and approvals. However, due to the policy non-compliance and missing consent, the request is held pending further clarification or approval. The request does not meet the criteria outlined in POL-013, which is the most relevant policy for this action. Therefore, the request cannot be approved without addressing these deficiencies.",
+        "recommendation": "Obtain CAB approval and ensure compliance with POL-013 before resubmitting the request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T07:40:29.354Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "0c42c989b7608e4fe1473c3c4b6fd97efc6621038d4f6fb97ed908d1253689ad",
+    "hash": "321e8bfdf4d6a758a9a8f8c5743cafbf891236f90cab7f334e88972f4b63a56a",
+    "signature": "IoUmEh2rFUUXKINGlwEL9G3w+xpO9GU4QcoABqiKCM6R0Eg8kksbpUhu3bpG0s2btdXaEZ2arDwGCGwbk5p6F+XOy1xo2ZxmNJ1EdWaENTNdc+gFz6rUEmlh2nEqJsPFyI1kLRv7CmKGCV5WgbzbwMRHXZa0gATvyVpHILZQs8ERHCp2NaXuEHe8urMgg2tvg3BAYbHRzIDDZXsnfkfZCA6MhBvL9pf1FarIgJktnaO5+Z31tFtVvrgdll36PL0CKpV9TLhV3rftRL4ElLxxzJihDLLnM7fxAKu4equekS2T2MXGvTaJXkzleCsDhSMAlI09sCxWxHlf4SkcvCikjg=="
+  },
+  {
+    "index": 17,
+    "timestamp": "2026-07-21T07:40:39.462Z",
+    "requestId": "71d7df8d-d4c1-4ccc-8135-7d52c0168070",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-026",
+            "title": "Deploy AI Model to Production",
+            "category": "AI Operations",
+            "relevanceScore": 0.5276
+          },
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5794
+          },
+          {
+            "policyId": "POL-018",
+            "title": "Shutdown Production Server",
+            "category": "Infrastructure Operations",
+            "relevanceScore": 0.6098
+          },
+          {
+            "policyId": "POL-015",
+            "title": "Restart Production Application Service",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6108
+          },
+          {
+            "policyId": "POL-008",
+            "title": "Restore Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.6152
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devops_user",
+        "role": "Senior Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "new policies to the production",
+        "riskScore": 0,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the lack of alignment between the requester's role and the authorized roles specified in the policies, the absence of required consent or approvals, and the non-compliance with specific deployment policies. Given the request's context and the retrieved policies, particularly POL-026 and POL-013, it is clear that additional information and approvals are necessary before proceeding. The request's intent to add new policies to production does not directly align with the deployment policies provided, suggesting a need for clarification or modification. Therefore, holding the request allows for further evaluation and ensures adherence to the company's governance policies.",
+        "recommendation": "Clarify the request with the requester and obtain necessary approvals from authorized roles as per POL-026 and POL-013 before re-evaluating the request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T07:40:39.456Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "321e8bfdf4d6a758a9a8f8c5743cafbf891236f90cab7f334e88972f4b63a56a",
+    "hash": "51e38e4cd78cbe0fa72d41e946bc426c274ec2e967d313842a020ae2662fd240",
+    "signature": "SMtrKlFKFiTTqxhzLZ4x8gPfVKPW1DhZ2LlZaN7+K8zh9Fndfp8zJ/ZxUvYCpPPkDvfmqAhYsaUE5HmfJH65jbXoDoOuvVhRjclEj6P7M/YxMu1iZ8pnQc/ION7qgcRdCJgjO9FarwbO5XObHyfcYwgEYaad6WDZPM0P+4eUcJt7HADQXWO1TSMlAUM/1nVoETfZpi1wCbr/m7wm2qOkoNv7/rFJPRa0+Eum//VO9wO/iM6cwtkS3/7QmKVJCmHzniY1e5CgnIj6v0uHyRBtwxo2c4WGsfr4dkfb7zHQ+uzTXcL5Yv/KM8OdvxxywVzM12ag86ov+ikIdX0Paa+4wg=="
+  },
+  {
+    "index": 18,
+    "timestamp": "2026-07-21T07:40:54.871Z",
+    "requestId": "efad9e15-f98e-44c4-a6f0-d5a8119ccb96",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-018",
+            "title": "Shutdown Production Server",
+            "category": "Infrastructure Operations",
+            "relevanceScore": 0.8258
+          },
+          {
+            "policyId": "POL-008",
+            "title": "Restore Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.8279
+          },
+          {
+            "policyId": "POL-029",
+            "title": "Execute Disaster Recovery Failover",
+            "category": "Disaster Recovery",
+            "relevanceScore": 0.8418
+          },
+          {
+            "policyId": "POL-015",
+            "title": "Restart Production Application Service",
+            "category": "Application Deployment",
+            "relevanceScore": 0.8433
+          },
+          {
+            "policyId": "POL-017",
+            "title": "Restart Production Server",
+            "category": "Infrastructure Operations",
+            "relevanceScore": 0.8464
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devops_user",
+        "role": "Senior Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "hi",
+        "riskScore": 0,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to approve the request is based on the fact that the query 'hi' does not imply a specific action that would violate any of the provided policies. Given the low risk score and Zone 1 (Auto Respond) assessment, and considering the policies provided, the request does not necessitate a specific role, environment, consent, or compliance check that would fail. The policies cited, while relevant to production environment actions, do not directly apply to the query 'hi', which appears to be a greeting rather than a request for a specific action. Therefore, the request is approved as it does not trigger any policy violations or require specific approvals. The recommendation is to proceed with caution and ensure any subsequent actions comply with company policies.",
+        "recommendation": "Proceed with caution and ensure subsequent actions comply with company policies."
+      },
+      "execution": {
+        "decision": "APPROVED",
+        "evaluatedAt": "2026-07-21T07:40:54.870Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "51e38e4cd78cbe0fa72d41e946bc426c274ec2e967d313842a020ae2662fd240",
+    "hash": "1aafc85fe0af04d10307432772c24e96db443cb46fde9342ec882f4bc4bbf592",
+    "signature": "D9QCkLT6/nV8DS9OjtVqLDozEYU33+RoLyXos0vkP4J0wPZvBvT7UhdO3y09QhqHVFXLujubYaTHxZ221SyXRm3k3pVhoLNLuwnnIl4wi5SSg6BtdY4QYJVA2Q1ZNDDZxIu87F1s2ueSfvmRntGTO6a3LqsbctskIh/mlztb21htvwmZX70A+SiQrJ7QedIQDfuwRGA+2mzH74+9YDmlSBPYhcSEViDO4FJ9o7Or4VPXhgkxqNcVmj5VqhN4wGObeC9Hj8gEuJwOYv9mldHgtBnIeVvtf+fLA+vBvXyfiuWoH+gzX3+zkcdeqnWzeuEn2GiyzRUjXq0y0wzwBmObzQ=="
+  },
+  {
+    "index": 19,
+    "timestamp": "2026-07-21T08:51:16.048Z",
+    "requestId": "1061b738-20d0-43e5-8f9c-037f1dc49e50",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5223
+          },
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5663
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6001
+          },
+          {
+            "policyId": "POL-026",
+            "title": "Deploy AI Model to Production",
+            "category": "AI Operations",
+            "relevanceScore": 0.6038
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6198
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devep_user",
+        "role": "Senior DevOps Engineer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "deploy this to the production",
+        "riskScore": 45,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the fact that the current environment is Development, but the request is to deploy to Production, which requires CAB approval and adherence to specific conditions as outlined in POL-013. The requester's role is authorized for this action, but the lack of CAB approval and the mismatch between the requested and current environments necessitate holding the request. Given the Zone 3 (Escalate) assessment, human escalation/consent is required before proceeding. The request does not comply with the policy requirements for Production deployments, leading to a held decision.",
+        "recommendation": "Escalate the request to the Change Advisory Board (CAB) for approval and ensure all conditions for Production deployment as per POL-013 are met before proceeding."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T08:51:16.043Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "1aafc85fe0af04d10307432772c24e96db443cb46fde9342ec882f4bc4bbf592",
+    "hash": "d0bed07cad10d201cb07ff3db038a5b7a1dffe9ef212667d7697b5b4b154a67b",
+    "signature": "iZKtd6hnqImmwhKAXqbBKVGbVDMj2CitBoKorblJjhZ9/S9lHydT36GhBUyHjadUvGm5r+x8wQT+xTXBqQX20edfV4/fCYtnppvtK9tv8T3gVioGMo4YTV9yxk346dSkla5va7zt0rNpl4VKHfzvi8HdHW/ztgGMtL5kQlaRDUgC4zWFnHTSOxeksokLClrdRH8xfFu+qw6HB/Sp73LzPfGiH7tOlfX7D2XLKIg14BR6vFfEBVyVo8nHHu7UU5VWaEnhI/63YIRYWTFLis/IFSS+hBSKHhOAcRJ7+slHYsqVZ9OLJbHDFsro6ijW0oD6TregGHsZTbKVuTYZA8jO9g=="
+  },
+  {
+    "index": 20,
+    "timestamp": "2026-07-21T08:51:31.037Z",
+    "requestId": "be899e63-8ac3-4f27-ac97-efc9d87c3496",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5223
+          },
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5663
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6001
+          },
+          {
+            "policyId": "POL-026",
+            "title": "Deploy AI Model to Production",
+            "category": "AI Operations",
+            "relevanceScore": 0.6038
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6198
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devep_user",
+        "role": "Senior DevOps Engineer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "deploy this to the production",
+        "riskScore": 45,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "Given the Zone 3 (Escalate) assessment and the lack of CAB approval and other mandatory prerequisites as outlined in POL-013, the request is held pending further review and compliance with the specified policies. The requester's role aligns with the policy, but the absence of required consent and policy compliance details necessitates a hold. The decision is conservative, prioritizing adherence to policy over immediate action, especially in a Production environment.",
+        "recommendation": "Obtain Change Advisory Board (CAB) approval and ensure all prerequisites outlined in POL-013 are met before resubmitting the deployment request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T08:51:31.033Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "d0bed07cad10d201cb07ff3db038a5b7a1dffe9ef212667d7697b5b4b154a67b",
+    "hash": "388e31c01ec205fcaae1acc8154902bd608f2567cdae80147c1fbfc68a5804d0",
+    "signature": "kbY3D9IEoiX+0KPNNwbSnH+QbhlYNUY0O6YxEBLwWkVdXDXZJT6vAtki+5MQHleggBxEgu9hwBlNYKUYaU+fojSV/7ugQrWLPs7FttrG/gUXohzR/h445fHJG+FvgNTHD/o66cBW/fxMTO5Ltiu3wJak+KjSHmegN5He7sGwCgx18Gmn1YfmA8Z1Q0EpdgjNOPk2eObgJ6keEkTzTkyKrO42GE/x3d6rfYkXOVqKxe1I37x2J0e3PO4SMS83hGTGDLx/pn6TPeyQPxuFmuREyCFZssjqdhvTtYrdsnOXPjEdaZdcqoZOt5yYT8OGEyslG2oj+BEVpjrBF7wCnvr3TA=="
+  },
+  {
+    "index": 21,
+    "timestamp": "2026-07-21T08:51:37.591Z",
+    "requestId": "0d66a541-c04f-4e63-99fa-82925f1fb257",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5223
+          },
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5663
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6001
+          },
+          {
+            "policyId": "POL-026",
+            "title": "Deploy AI Model to Production",
+            "category": "AI Operations",
+            "relevanceScore": 0.6038
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6198
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devep_user",
+        "role": "Senior DevOps Engineer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "deploy this to the production",
+        "riskScore": 100,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the lack of CAB approval and non-compliance with the mandatory prerequisites for Production deployments as stated in POL-013. Given the high risk score and Zone 3 (Escalate) assessment, it is crucial to ensure all policy requirements are met before proceeding. The requester's role is appropriate, but the absence of necessary approvals and validations necessitates further review. Therefore, the request is held pending fulfillment of these requirements.",
+        "recommendation": "Obtain Change Advisory Board (CAB) approval and ensure all prerequisites for Production deployment are met as per POL-013 before resubmitting the request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T08:51:37.589Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "388e31c01ec205fcaae1acc8154902bd608f2567cdae80147c1fbfc68a5804d0",
+    "hash": "641289465395feb62742952e251c3302581e9142b4e31e0baaf99b2e258943cb",
+    "signature": "VyNX8ZxAAT01WsSBIOCpbXwZvrUcP6fwHAdL3Rut5jwjsf9DisnaTO6UAj6+DNEhlsERRGDvUdsQcTR36GIdIF+550IhYqgST3uytu2IFoYANyYZAUrOZEzgVnP+m5gPKl9IGcPuaCSD+DGAtpIRI7iFvNh0c3RhuSrsyLqMJbDAO3oYtpATnEhtiUo8REilr3buY5zs+O0BS/CZruuT5ag9tDsYb/6PFQkyux7iFDX2OeBBKBXnldmAbdviKbmXSUjNXrfCfYQd8KSeazGcYyqDv5GHgJYBH68fGF1x18UjorqxmT+2pSnGPOglNYYSKCPz7KCYwAmCB/9JHcvQQA=="
+  },
+  {
+    "index": 22,
+    "timestamp": "2026-07-21T08:51:43.930Z",
+    "requestId": "07891891-4b99-4547-9eab-4a1eaeab7138",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-010",
+            "title": "Deploy Application to Development",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5223
+          },
+          {
+            "policyId": "POL-013",
+            "title": "Deploy Application to Production",
+            "category": "Application Deployment",
+            "relevanceScore": 0.5663
+          },
+          {
+            "policyId": "POL-014",
+            "title": "Rollback Production Deployment",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6001
+          },
+          {
+            "policyId": "POL-026",
+            "title": "Deploy AI Model to Production",
+            "category": "AI Operations",
+            "relevanceScore": 0.6038
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.6198
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "devep_user",
+        "role": "Senior DevOps Engineer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Production",
+        "query": "deploy this to the production",
+        "riskScore": 0,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the lack of Change Advisory Board (CAB) approval and non-compliance with the mandatory requirements for Production deployments as outlined in POL-013. Given the Zone 3 (Escalate) assessment, human escalation/consent is required before proceeding. The requester's role as a Senior DevOps Engineer is appropriate for this action, but the absence of necessary approvals and validations necessitates further review. The request will be held pending fulfillment of these requirements.",
+        "recommendation": "Obtain Change Advisory Board (CAB) approval and ensure all prerequisites for Production deployment are met before resubmitting the request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-21T08:51:43.928Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "641289465395feb62742952e251c3302581e9142b4e31e0baaf99b2e258943cb",
+    "hash": "2f503222fb60bfec012ad3f9a70b7b9facea3eea1e3fedce8ecc6513146c40f0",
+    "signature": "Io7dkIVLxDzQcKH8OBFw/gcolBnVf1RfOuJ8E67aC5OGSx63JV4bveJoo48N2MuJ45xb5tNITsEphh6r1PVopoY8R0NiE7kpOUul2Fl5Fjtf99SV9zNPNf4B6y0aWSLfkxxowqO0AdwHjkp7uo6SUo/1O5vj9kZNPejwyalWdWb9nOHDIh+QxOw3u56BRXTTNYCfJUxh3of1Lhl4jQVjEToXojaM5rPaQGhJdn1/42WnJrNK4jEABI1r+QYfmfVpVQSy7rU+ENEXQLnw5yINn/ZFnixBIMX81qSHYG/Ie7EwKhYqHVfLtO6y/T6HEot1F3XvOmusPV5Qi4QW0Gz9xQ=="
+  },
+  {
+    "index": 23,
+    "timestamp": "2026-07-21T09:08:04.670Z",
+    "requestId": "011704d1-24d0-45b7-98c6-8fa555b83732",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-004",
+            "title": "Create Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.7484
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.8548
+          },
+          {
+            "policyId": "POL-022",
+            "title": "Disable Security Logging",
+            "category": "Security Operations",
+            "relevanceScore": 0.8673
+          },
+          {
+            "policyId": "POL-021",
+            "title": "Create Administrator Account",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.8828
+          },
+          {
+            "policyId": "POL-016",
+            "title": "Create Virtual Machine",
+            "category": "Infrastructure Operations",
+            "relevanceScore": 0.8997
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "BHAVYA",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "generate test cases for login api",
+        "riskScore": 45,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to approve the request is based on the fact that the request to generate test cases for the login API does not explicitly violate any of the provided policies. The Developer role is deemed sufficient for this task in the Development environment, and no specific consent is required. The request is being made in the Development environment, which is appropriate for generating test cases. The policies provided, such as POL-004 and POL-011, do not directly apply to this request but demonstrate the company's emphasis on following established procedures for testing and deployment activities.",
+        "recommendation": "Proceed with generating test cases for the login API in the Development environment."
+      },
+      "execution": {
+        "decision": "APPROVED",
+        "evaluatedAt": "2026-07-21T09:08:04.665Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "2f503222fb60bfec012ad3f9a70b7b9facea3eea1e3fedce8ecc6513146c40f0",
+    "hash": "cb28cd307f475c4fb67ffa23a78a1bfb39b548c9f3325c4bfea3e39271e36216",
+    "signature": "F6Xf1TFotKt2l+fsZ+jKG1FongW9WODedFqzecyE9MCbTNmVTnaDzH3ChCWQFnDbp1LEUiI4aayhlP/lE5hPJBLMfTuUsyy8S1yPvoOctQFm6/2gQ+Cq+MJxS/QfwaQrbV27BUOZ+SLIrqs207HFzg2dtByqSMwFw1TQMxFktfZQWrGNhHqPRrBxib1v3zt73f9Ky/kazrT8TQlS6B76VprCSdnJOFJWkryEPCLOoSWZqmcW+ty4saUra/9o8iaOsoECqmFzLDzk8KLnsYWKKCnziax+hHNLCLMc+q55vHHGz82xyAyfzvyjTl9TrDg26akhcUTOEA3mH7dgB1cD9g=="
   }
 ]

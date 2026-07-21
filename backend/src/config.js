@@ -34,11 +34,20 @@ config.companyRegistry = {
 
 config.roles = [
   'Developer',
-  'QA Engineer',
   'Senior Developer',
+  'QA Engineer',
   'DevOps Engineer',
+  'Senior DevOps Engineer',
   'Database Administrator',
+  'Senior DBA',
+  'Infrastructure Engineer',
+  'IAM Administrator',
   'Security Administrator',
+  'Network Engineer',
+  'Data Administrator',
+  'ML Engineer',
+  'Site Reliability Engineer',
+  'Incident Commander',
   'Manager',
 ];
 
