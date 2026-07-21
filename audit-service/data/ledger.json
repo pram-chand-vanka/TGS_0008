@@ -1,0 +1,761 @@
+[
+  {
+    "index": 0,
+    "timestamp": "2026-07-20T10:15:55.978Z",
+    "requestId": "c22f9e81-5edd-4496-a8ee-64fb0510aed3",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-012",
+            "title": "Deploy Application to UAT",
+            "category": "Application Deployment",
+            "relevanceScore": 0.3233
+          },
+          {
+            "policyId": "POL-023",
+            "title": "Modify Firewall Rules",
+            "category": "Security Operations",
+            "relevanceScore": 0.2788
+          },
+          {
+            "policyId": "POL-019",
+            "title": "Grant Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.271
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.2552
+          },
+          {
+            "policyId": "POL-021",
+            "title": "Create Administrator Account",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.2535
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "compliance_officer",
+        "role": "DevOps Engineer",
+        "department": "Infrastructure",
+        "company": "XYZ Solutions",
+        "environment": "UAT",
+        "query": "Can I modify the security groups to allow direct ingress access on port 22 in UAT?",
+        "riskScore": 35,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the requester's role not matching the authorized role for modifying firewall rules as per POL-023, and the lack of Security Architect approval. Although the request is in Zone 1 (Auto Respond), the policy non-compliance and missing consent take precedence. The request will be held until these issues are addressed. POL-012 is also relevant as it pertains to UAT environment deployments, but the primary concern here is the modification of security groups, which falls under POL-023. The requester should obtain the necessary approvals and provide a risk assessment before proceeding.",
+        "recommendation": "Obtain Security Architect approval and provide a risk assessment for the proposed firewall rule changes before resubmitting the request."
+      },
+      "execution": {
+        "decision": "APPROVED",
+        "evaluatedAt": "2026-07-20T10:15:55.966Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "hash": "a7f0ce8b3fc1b36e880d9f75ed9f23ff9c255f1ff4664366c41528923ec18c1a",
+    "signature": "JNtQy818Wb8vd0SccCTKCZK/VZjaE0eJL9b93/BO5uIhS7BI1XNVo4HhDE9BYYwYTB3kMT9edsvI9AeK5M5Sal+SxkKCkjBl6EZupSRK1jRiHRGVW2DKpoEYWJDyH03sS4D3dK7wkJIzIpc2ytu+zZoQyDuuavhUgNG6EquUkBQs5shnQQJE80A/Mv+3KFuVUrep0sIOwPRrPv16euO3hp73DsP/JLn1PaygoUwoCUezA4BNGkF1vVGAKXpkl60XwxnHPGqZCxSS03YMhiXqheaLG50fQoDusJ2PSL0Il+JFO/eIBIm2Q9YtoIzLDw9pm9vbKRzte3bLx2Q7BCbRxA=="
+  },
+  {
+    "index": 1,
+    "timestamp": "2026-07-20T10:23:27.930Z",
+    "requestId": "1318fcfe-e2b5-4696-85d6-361ecac3d0cd",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-012",
+            "title": "Deploy Application to UAT",
+            "category": "Application Deployment",
+            "relevanceScore": 0.3114
+          },
+          {
+            "policyId": "POL-021",
+            "title": "Create Administrator Account",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.2937
+          },
+          {
+            "policyId": "POL-023",
+            "title": "Modify Firewall Rules",
+            "category": "Security Operations",
+            "relevanceScore": 0.2921
+          },
+          {
+            "policyId": "POL-019",
+            "title": "Grant Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.2586
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.256
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "compliance_officer",
+        "role": "DevOps Engineer",
+        "department": "Infrastructure",
+        "company": "ABC Bank",
+        "environment": "UAT",
+        "query": "Can I modify the security groups to allow direct ingress access on port 22 in UAT?",
+        "riskScore": 35,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The request to modify security groups to allow direct ingress access on port 22 in UAT is being held due to the requester's role not matching the authorized role for this action, lack of Security Team Approval, and non-compliance with POL-023. The request requires further review and approval from the Security Team before it can proceed. The Zone 1 (Auto Respond) assessment from CAS suggests a lower risk, but the policy requirements and the requester's role take precedence in this decision. The request will need to be revised to include the necessary approvals and justifications before it can be reconsidered.",
+        "recommendation": "The requester should obtain Security Team Approval and provide a detailed business justification for the requested change before resubmitting the request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-20T10:23:27.921Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "a7f0ce8b3fc1b36e880d9f75ed9f23ff9c255f1ff4664366c41528923ec18c1a",
+    "hash": "6c37516f9097d2522e43a48d0d98e7891223601f8ebc3764bdc95c7adedd49fa",
+    "signature": "NWjK0HXG8pPzVkWoBegi3mHYTQ68COnymdseIHaJrLXDnw2Zv4lTl2zOI0joRN+Qc13I5duXooX04CuaLYoSQokZzjqQ+IaGhIJwC3UGcwZxcBPqi+SIp4qANP6qbDdJZ+MrGez5a0JTNr3/J/3FzCEM3rEgVh8SZf2OiGrxTpWRod4+13njy720XdH9XFuUdiWtgwRmUAaRbkTXWjy7u/1c/XIA+5/YlBVuLrJcuEMCxMneamKjldx4hnWKUZTd7LILfZ+iFVwOR4/wIxE0+zWdWNA9M4uFLRg0s1JUVXb5osjVLgtYsmaX/YTwF0jYoCTkBn4y9qTFKwuUxmbV0Q=="
+  },
+  {
+    "index": 2,
+    "timestamp": "2026-07-20T11:07:28.033Z",
+    "requestId": "d2072408-7c0e-478a-8ff9-ea657fee0e39",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-012",
+            "title": "Deploy Application to UAT",
+            "category": "Application Deployment",
+            "relevanceScore": 0.3114
+          },
+          {
+            "policyId": "POL-021",
+            "title": "Create Administrator Account",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.2937
+          },
+          {
+            "policyId": "POL-023",
+            "title": "Modify Firewall Rules",
+            "category": "Security Operations",
+            "relevanceScore": 0.2921
+          },
+          {
+            "policyId": "POL-019",
+            "title": "Grant Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.2586
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.256
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "compliance_officer",
+        "role": "DevOps Engineer",
+        "department": "Infrastructure",
+        "company": "ABC Bank",
+        "environment": "UAT",
+        "query": "Can I modify the security groups to allow direct ingress access on port 22 in UAT?",
+        "riskScore": 35,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The request to modify security groups for direct ingress access on port 22 in UAT does not comply with POL-023, as it lacks the required Security Team Approval and the requester's role does not match the policy's Authorized Role. Given the Zone 1 (Auto Respond) assessment, the request should still be scrutinized due to the policy non-compliance and lack of consent. Therefore, the decision is to hold the request pending further review and approval. The request's environment is appropriate, but the lack of proper authorization and consent outweighs this. The accountability of the request is clear, but this alone is not sufficient for approval.",
+        "recommendation": "Escalate the request to the Security Team for review and approval, ensuring compliance with POL-023."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-20T11:07:28.017Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "6c37516f9097d2522e43a48d0d98e7891223601f8ebc3764bdc95c7adedd49fa",
+    "hash": "1b2102982ceb46f4f3ee01eca10f5d292c58c8d824cdd11aebb81f6251eaebca",
+    "signature": "hzeCZHWOHPl6o7Aaik6iUmzRtZuzMf3Jsm3VIMCPMqA9qTH5oerr9CvdsXvzJZRQaWkWQbrXm2cjtdKqB+kkzAkK61Axp7+m2ycyRudxICEM1NC3HEMfqakl0I5QIegpqCTW+znup1BKzrgXgY4bwXsuN7czBRBIxPUAAdYMrJkwohSiAOg6EEmon9f9yFYuaDPCXT69Vc+CP8mKka+G0tF2JqMz1MExsZk5ReWBCamrK6bmES4DFvsgeM2nWBdK3zMfi+WNryKYCqmeer+YxeghjNKvKRxr++AzZMpPlUmDKuDUAjn+Lkjqc1VoW1sUVhzW6PPeLX0dXMDVyzMcYQ=="
+  },
+  {
+    "index": 3,
+    "timestamp": "2026-07-20T11:14:28.526Z",
+    "requestId": "bf497ef7-9686-4a93-8174-24e0984e4417",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-004",
+            "title": "Create Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.2343
+          },
+          {
+            "policyId": "POL-022",
+            "title": "Disable Security Logging",
+            "category": "Security Operations",
+            "relevanceScore": 0.139
+          },
+          {
+            "policyId": "POL-011",
+            "title": "Deploy Application to QA",
+            "category": "Application Deployment",
+            "relevanceScore": 0.1338
+          },
+          {
+            "policyId": "POL-021",
+            "title": "Create Administrator Account",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.1093
+          },
+          {
+            "policyId": "POL-016",
+            "title": "Create Virtual Machine",
+            "category": "Infrastructure Operations",
+            "relevanceScore": 0.088
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "test_user",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "generate some test cases for login api",
+        "riskScore": 24,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "Given the low risk score of 24 and the Zone 1 (Auto Respond) assessment, the request to generate test cases for the login API can proceed without needing additional consent or human escalation. The user's role as a Developer and the Development environment align with the task's requirements. None of the retrieved policies directly prohibit or require specific actions for this request, leading to a decision of APPROVED. The policy POL-011, while not directly applicable, supports the importance of testing in the QA environment, which aligns with the spirit of generating test cases.",
+        "recommendation": "Proceed with generating the test cases for the login API in the Development environment."
+      },
+      "execution": {
+        "decision": "APPROVED",
+        "evaluatedAt": "2026-07-20T11:14:28.515Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "1b2102982ceb46f4f3ee01eca10f5d292c58c8d824cdd11aebb81f6251eaebca",
+    "hash": "1c664419c699c603769581b5bb4dca42d26c423126a70b71a841ce0deb5814ce",
+    "signature": "FnsWsgyTqekSzisxYaI5Vx2nKPy3VRw2q0xFJ7jeUKJGeM1b2jbopbPaRCPHHjCkAmHC211oElwLCyQiO3bXDBNVjT9dZOEsNEufkVnbq3TMNpqjF7O0dQT7YEYzqskw4VKtArDm+Rc2sUQKlmrA4uNs6EwIMoYFg+TKX6mi3YiC40FvcC9qR0RuQYEumL1g1b1rCQ/VRXTb/2W6pcLg3VzrRgpweNaCbTcaeA6vjRPasXh5w0mNppF1V/gihMVu1tod1MSzVXIykFsZK0HqBz2QNUkII5onpO5g+q+NYNKjVxMfWF6nU1GTMY/qqWB04TJSaIdPLViZAaxRLPwPCg=="
+  },
+  {
+    "index": 4,
+    "timestamp": "2026-07-20T11:15:52.362Z",
+    "requestId": "c01857ce-0b0f-4a90-b2a0-9898897d75cd",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-025",
+            "title": "Delete Customer Data",
+            "category": "Data Management",
+            "relevanceScore": 0.5797
+          },
+          {
+            "policyId": "POL-006",
+            "title": "Delete Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.4442
+          },
+          {
+            "policyId": "POL-003",
+            "title": "Delete Database in Development Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.4381
+          },
+          {
+            "policyId": "POL-009",
+            "title": "Delete Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.4319
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.3571
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "prem",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "delete customer data from the database",
+        "riskScore": 59,
+        "zone": "Zone 3"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the lack of compliance with POL-025, which requires Compliance approval for customer data deletion, and the mismatch between the requester's role and the authorized role for such actions in production environments. Although the requester is a Developer and the action is in the Development environment, which aligns with POL-003, the specific action of deleting customer data introduces complexities that require adherence to POL-025. The request also lacks the required consent, specifically Team Lead Approval for database deletion in Development and Compliance Approval for customer data. Given the Zone 3 (Escalate) assessment, human escalation/consent is necessary before proceeding.",
+        "recommendation": "Escalate the request to the appropriate authorities, including obtaining Compliance approval and Team Lead approval, to ensure policy compliance before proceeding with the deletion of customer data."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-20T11:15:52.353Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "1c664419c699c603769581b5bb4dca42d26c423126a70b71a841ce0deb5814ce",
+    "hash": "c35b2bca0492d8e68417bd3347fe9f751ab64f9e0ef549bc8e7ec771830f9620",
+    "signature": "W+nBtN7Bx4zGPw5oUldhFSouygGbbw85rSIHIsYDSqvmfro97b/WOZb1O0fZnXdqB03zxV/7MKpq1jbiGqJSa/8tgBmoTmqLCkJYvvyimHgrZ3fBRrGtTw8cf1NABPiF6I6446itGh6Z+7f6YfgOMwsSVlsCC7tjG/RnWt1AXwQeQSs8Qq8o5ZYFbhZySr46re6id6754QG4J6WG/2dj1ZeD7/iIwO0/4RMDzTUwUMgIzMpy7ZvN2nJXWVQctAwEZAXB40SRsZTjZyoieSt3AGyyrDll0vXT6yir1rzd1KlG8owGFMvi3u9irsTIvgFnL5ZZDanWJK80xFY+7INKcw=="
+  },
+  {
+    "index": 5,
+    "timestamp": "2026-07-20T11:15:58.516Z",
+    "requestId": "9170eb1e-4f93-4bc7-8044-98da5660daa6",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-025",
+            "title": "Delete Customer Data",
+            "category": "Data Management",
+            "relevanceScore": 0.5797
+          },
+          {
+            "policyId": "POL-006",
+            "title": "Delete Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.4442
+          },
+          {
+            "policyId": "POL-003",
+            "title": "Delete Database in Development Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.4381
+          },
+          {
+            "policyId": "POL-009",
+            "title": "Delete Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.4319
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.3571
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "prem",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "delete customer data from the database",
+        "riskScore": 59,
+        "zone": "Zone 4"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to block the request is based on the high-risk nature of deleting customer data, as indicated by the Zone 4 (Reject) assessment. The requester's role as a Developer does not align with the authorized roles for such actions in any provided policy, and there is a lack of required consent or approval. Policies POL-003 and POL-025 provide clear guidelines for database and customer data management, respectively, and the request does not meet these standards. Therefore, to maintain policy compliance and accountability, the request must be blocked.",
+        "recommendation": "The requester should consult with the appropriate authorities, such as the Team Lead or Compliance department, to understand the necessary steps and approvals required for deleting customer data in the Development environment."
+      },
+      "execution": {
+        "decision": "BLOCKED",
+        "evaluatedAt": "2026-07-20T11:15:58.505Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "c35b2bca0492d8e68417bd3347fe9f751ab64f9e0ef549bc8e7ec771830f9620",
+    "hash": "515fb82d85c1a232350c730384fe095855ef091f75712fbbfdb0ad40a46dc2f2",
+    "signature": "CW9WPWYl7KCgQ1abtonAPztc8ZGeX19To0pImNjvhDtk9Ks1xY8NQZISQjuCiQ5gRFQuZXJYN/sb0mIftP5Ypm3XGBE8pS+DKySFd2B96zc+N25lVLL0iLcRa7NF7WRHENsvwTQ2TE4bj4SRKiIWfvfMzrEoS6DBLoXl9T/THX9+VBCoIkxvufM6lFKHOKYWLq4R3vawDL6GLND3oiwym0AuARYLBn8pldGy6uXxvHAYomHs2X0UtdQosdkzUOihKb1lik3SIxZYUxSrerxrcWIB0a40b6fyL6O6aSryG8/+DvXqTYJp/Ax6buEZwraMQaXVUahwqyU1O9k9EwLkcQ=="
+  },
+  {
+    "index": 6,
+    "timestamp": "2026-07-20T11:20:07.541Z",
+    "requestId": "132e22a7-5297-4bea-b32c-59d2a84bdc9b",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-003",
+            "title": "Delete Database in Development Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6319
+          },
+          {
+            "policyId": "POL-006",
+            "title": "Delete Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6249
+          },
+          {
+            "policyId": "POL-009",
+            "title": "Delete Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.598
+          },
+          {
+            "policyId": "POL-025",
+            "title": "Delete Customer Data",
+            "category": "Data Management",
+            "relevanceScore": 0.4965
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.4614
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "test_user",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "delete database ",
+        "riskScore": 9,
+        "zone": "Zone 1"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the lack of Team Lead approval, which is a requirement for deleting databases in the Development environment as stated in POL-003. Although the requester's role and the environment align with the policy, the absence of consent is a critical factor. Given the Zone 1 (Auto Respond) assessment, the request could proceed autonomously if all policy and role checks pass, but the missing approval necessitates a hold. The request's context and the retrieved policies indicate that obtaining Team Lead approval is essential before proceeding with the deletion. Therefore, holding the request until this requirement is met is the most appropriate course of action.",
+        "recommendation": "Obtain Team Lead approval for the database deletion and resubmit the request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-20T11:20:07.534Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "515fb82d85c1a232350c730384fe095855ef091f75712fbbfdb0ad40a46dc2f2",
+    "hash": "3c22d0c1e2bba287e48dff97d36b5c4f4c460592cec332bf89c7e30e22700e3b",
+    "signature": "QpwVzQjS5bsHfN4xGy9PmxxCjzOkvaRgXFwj0oq5Sfle5SFecY5EM0Hq2V+YJigTpEop6JJIomGilpus85ypS+bFgXfEt9OSCIuXHWDDsiyQD3vaUzJYNdDV9UQjVhOeDrcn6YMZXb2zP+dUQYuopBVxfZ18WOmV5WO0kOR6akhbQQTB7tPqYwviBYEo1y7r2DnX1U1boKvHpeNm0b39bqubWornqJtehGZVlzbk2B2hwEWm6USRjl8zRIJjeKaw9J9WlvXczAbFqaZAQDKul+ZQQCS55XM2m6/TkQmFcFrL7aWlsgAOM2MjoUM9+CL6jGrBTsZTlleg3fp9hx7oVA=="
+  },
+  {
+    "index": 7,
+    "timestamp": "2026-07-20T11:24:01.579Z",
+    "requestId": "77bb6a13-e403-4b09-bb6f-b3d74441e22a",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-003",
+            "title": "Delete Database in Development Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6319
+          },
+          {
+            "policyId": "POL-006",
+            "title": "Delete Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6249
+          },
+          {
+            "policyId": "POL-009",
+            "title": "Delete Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.598
+          },
+          {
+            "policyId": "POL-025",
+            "title": "Delete Customer Data",
+            "category": "Data Management",
+            "relevanceScore": 0.4965
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.4614
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "user",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "delete database",
+        "riskScore": 45,
+        "zone": "Zone 2"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "Given the Zone 2 (Ask Clarification) assessment and the lack of Team Lead approval and verification that the database is no longer required, the request is held for further clarification. POL-003 dictates specific conditions for deleting databases in the Development environment, which have not been fully met. Therefore, the decision is to hold the request until these conditions are satisfied. The requester's role as a Developer aligns with the policy, but the absence of required consent and verification necessitates a hold rather than approval. The request's environment and accountability aspects are in line with policy, but the consent and policy compliance checks indicate a need for additional information or approval.",
+        "recommendation": "Obtain Team Lead approval and verify the database is no longer required before resubmitting the request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-20T11:24:01.567Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "3c22d0c1e2bba287e48dff97d36b5c4f4c460592cec332bf89c7e30e22700e3b",
+    "hash": "01a193dd808470ef87485e4716cbc2f6675b5201a267dc0b1566dc7644f40b99",
+    "signature": "LjDcC/bIyMVlPTeNON5XuPajF4q1khgFox4ORyhUreIcwGr5TN7r4xxxxLV1tA5Uh/L1F7/RWtnd0MBz3R6vHpfSMbIGUy+FNNeVPJqYRaURP90cfXrYtCcDMp3gkH7YEUvyGs6T8vsG6SCeNIk8D8XEOhVTgnlpJkVvNe0d/UQmdiu+2mpB4ZLi/nvvAftL6RgJUQ+bNe2ZgFmG/M7i/+HFyhS8ZAWQcgG7Hyl59jELM8BWbbT4hZhwqodGLmwptShF3JackK7ofoFPzFMG0V0/15gRp6615PcLkdasoye9E/RB1bGZd9WCFHNSW4mNDQC58zIHuR5jA7QphZsisw=="
+  },
+  {
+    "index": 8,
+    "timestamp": "2026-07-20T11:24:47.284Z",
+    "requestId": "d3f54639-6d57-407c-8f59-5339d9163af7",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-003",
+            "title": "Delete Database in Development Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6319
+          },
+          {
+            "policyId": "POL-006",
+            "title": "Delete Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6249
+          },
+          {
+            "policyId": "POL-009",
+            "title": "Delete Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.598
+          },
+          {
+            "policyId": "POL-025",
+            "title": "Delete Customer Data",
+            "category": "Data Management",
+            "relevanceScore": 0.4965
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.4614
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "user",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "ABC Bank",
+        "environment": "Development",
+        "query": "delete database",
+        "riskScore": 100,
+        "zone": "Zone 2"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the lack of Team Lead approval, which is a critical requirement for deleting databases in the Development environment as outlined in POL-003. Although the requester's role and environment are appropriate, the absence of necessary consent necessitates further clarification or approval. Given the high risk score and the need for clarification as indicated by Zone 2, holding the request ensures compliance with company policies and allows for a thorough review. The request's alignment with POL-003 and the general principles of accountability supported by POL-020 are considered in this evaluation.",
+        "recommendation": "Obtain Team Lead approval and resubmit the request for deleting the database in the Development environment."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-20T11:24:47.277Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "01a193dd808470ef87485e4716cbc2f6675b5201a267dc0b1566dc7644f40b99",
+    "hash": "a9603426543211d512b814fbae1080c52bd4cce69f9f02e7e954bb7ec3f7e310",
+    "signature": "inmXZ2sW3BjOy/xGYX4JhkLUXR66oZFSpthdsihPIJfGRxy8+AroOrNb59RlIPQiV4kuxRBamVYvS3rtzsI9C2oe+I8+G7FsOUI3T4nDTk+ZsM7/sjmVlqR+eNAVvAkQrraf+NJAeq9Od7IBYqrOMXXSSerf4VlxwHijkvHdhEOlQi7Dn63bZtrJmrB55m8puSQHQmEwXGeVnEenK3wRDODjVTYkRKtijoMV/Gbl7S80jKCCfi++/KNWFM7DCdsTYdciuJj7HigmZW8isntt2K0kHMhOUye08IeumfACISyyMulJmUcYkmE8CsphKWqtGmv6alfy5EUfV4BFF0H2oA=="
+  },
+  {
+    "index": 9,
+    "timestamp": "2026-07-20T11:25:11.319Z",
+    "requestId": "02b3f4c3-0ded-427e-aca1-554cc6997fa4",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-003",
+            "title": "Delete Database in Development Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6492
+          },
+          {
+            "policyId": "POL-006",
+            "title": "Delete Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6208
+          },
+          {
+            "policyId": "POL-009",
+            "title": "Delete Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.5954
+          },
+          {
+            "policyId": "POL-025",
+            "title": "Delete Customer Data",
+            "category": "Data Management",
+            "relevanceScore": 0.474
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.4343
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "user",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "XYZ Solutions",
+        "environment": "Development",
+        "query": "delete database",
+        "riskScore": 100,
+        "zone": "Zone 2"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the lack of Project Lead Approval and confirmation of no dependencies on the database, as mandated by POL-003. Given the high risk score and Zone 2 assessment, it is prudent to seek clarification before proceeding. The requester's role as a Developer aligns with the policy, but the absence of required consent and compliance checks necessitates a cautious approach.",
+        "recommendation": "Request clarification from the user regarding Project Lead Approval and dependencies on the database before reconsidering the deletion request."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-20T11:25:11.311Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "a9603426543211d512b814fbae1080c52bd4cce69f9f02e7e954bb7ec3f7e310",
+    "hash": "ddf89897f320a096b479334766b888f0b3886b277032082ad91f77bd45901763",
+    "signature": "epoTwSiJuHtRXeEAAH5kNmUBYRzBWsgnmXuG8i08ssbKT6tj99mkrAYRdWMimVj7EUtnLKCCEIGBui4tdfNs1K85LnbA2KnLqpFxCulKG1TNYLSU/sjLEbZjeRgK96KAzy5Pzp4m7zCpi0YrjUoxxLl3HFLyy71CTgSaGCs9aKcBZiJMjlOwCAXi15EyKfgOTlfmXZb8EroGDyP/5Pzt+w1shOy579tZUtYgdHEFFgWqZidqwBSMbIASxnMZM5vDLqSD08rf3Fb1bs2q7m9zv7bXceKTNviQvWYXl/YFj6q3TyaCqSYunnZhxfhokbbKyPIGGjngXPHSeCy4NbCn3w=="
+  },
+  {
+    "index": 10,
+    "timestamp": "2026-07-20T11:32:21.432Z",
+    "requestId": "f19fa98c-2417-41df-9fb8-6f165a8fc6bb",
+    "fragments": {
+      "policy_evaluation": {
+        "retrievedPolicies": [
+          {
+            "policyId": "POL-003",
+            "title": "Delete Database in Development Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6492
+          },
+          {
+            "policyId": "POL-006",
+            "title": "Delete Database in QA Environment",
+            "category": "Database Operations",
+            "relevanceScore": 0.6208
+          },
+          {
+            "policyId": "POL-009",
+            "title": "Delete Production Database",
+            "category": "Database Operations",
+            "relevanceScore": 0.5954
+          },
+          {
+            "policyId": "POL-025",
+            "title": "Delete Customer Data",
+            "category": "Data Management",
+            "relevanceScore": 0.474
+          },
+          {
+            "policyId": "POL-020",
+            "title": "Revoke Database Access",
+            "category": "Identity & Access Management",
+            "relevanceScore": 0.4343
+          }
+        ]
+      },
+      "risk_assessment": {
+        "username": "user",
+        "role": "Developer",
+        "department": "Engineering",
+        "company": "XYZ Solutions",
+        "environment": "Development",
+        "query": "delete database",
+        "riskScore": 0,
+        "zone": "Zone 2"
+      },
+      "consent_management": {
+        "requiresConsent": false,
+        "consentPolicies": []
+      },
+      "explainability": {
+        "modelUsed": "llama-3.3-70b-versatile",
+        "reason": "The decision to hold the request is based on the need for clarification and compliance with POL-003, which requires confirmation of no dependencies on the database and Project Lead Approval, neither of which is provided in the request. Given the Zone 2 (Ask Clarification) assessment, it's prudent to seek more information before proceeding. The requester's role as a Developer aligns with the policy, but the lack of consent and unclear policy compliance necessitate a cautious approach.",
+        "recommendation": "Request additional information regarding dependencies on the database and obtain Project Lead Approval before proceeding with the deletion."
+      },
+      "execution": {
+        "decision": "HELD",
+        "evaluatedAt": "2026-07-20T11:32:21.428Z",
+        "checksCount": 5,
+        "status": "success"
+      }
+    },
+    "previousHash": "ddf89897f320a096b479334766b888f0b3886b277032082ad91f77bd45901763",
+    "hash": "69e1ec6d48d9b8d503dfeaa6e7efc394078207c69025bfab76b1dd0331fced40",
+    "signature": "J1NYDdWw9nFQySZBEs6EtXYV1wjuNEiI/W53moRkyNZF0k1qa69lKkMpXNrEs+M+tstu7aTub/CGCYx0uQfee9MjhgqSfZEG02YmqN2zYlY196BJfAK+6PgqN3V5T0VMgOPJpXsds+sGtFoAHAYvYeHjZwwXVdvHI0NaZTh6jT3+7mYyk4awAOS3pwr8KXZcExlNbsfh5b5HKH8S2P+4TjEKZ7MroYf25kO+3/3iUqn0oXY2BysJLyzEZVTwDJfc/MayRD2jqo0FwLpEbiKDpG2G7WODojwrxUq8cAaXO7TRGfo5D43xgbSmDxdyknaofYDE0p22RBdIMsTjJ0x+mQ=="
+  }
+]
